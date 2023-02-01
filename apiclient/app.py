@@ -1,9 +1,11 @@
 import urllib.request
 import urllib.error
 import os
+jwt=""
+if "JWT" in os.environ:
+ jwt="Bearer " + os.environ.get("JWT")
 
-jwt="Bearer " + os.environ['JWT']
-req = urllib.request.Request('http://docker.host.internal')
+req = urllib.request.Request('http://host.docker.internal')
 req.add_header("Authorization", jwt)
 try:
       with urllib.request.urlopen(req) as response:
