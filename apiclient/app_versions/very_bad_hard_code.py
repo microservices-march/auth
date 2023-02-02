@@ -11,5 +11,4 @@ try:
          message = response.getheader('X-MESSAGE')
          print("200  " + message)
 except urllib.error.URLError as e:
-      print(str(e.code) + "  " + e.msg)
-~                                          
+      print(str(e.code) + "  " + e.msg)                                       
