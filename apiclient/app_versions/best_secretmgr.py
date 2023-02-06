@@ -3,7 +3,7 @@ import urllib.error
 import os
 import time
 import sys
-import logging
+
 
 jotfile="/run/secrets/jot"
 jwt=''
@@ -25,7 +25,7 @@ while True:
                  the_page = response.read()
                  message = response.getheader('X-MESSAGE')
                  print("200  " + message, file=sys.stderr)
-                 logging.warning(message)
+                 
     except urllib.error.URLError as e:
           print(str(e.code) + "  " + e.msg, file=sys.stderr) 
-          logging.warning(e.msg)
+          
