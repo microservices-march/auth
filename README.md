@@ -1,1 +1,1 @@
-#This is the lab for the secrets management lesson# 
+# This is the lab for the secrets management lesson
