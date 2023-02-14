@@ -1,12 +1,7 @@
-#Deriving the latest base image
-FROM python:latest
+FROM python:3.11
 
 WORKDIR /usr/app/src
 
-#to COPY the remote file at working directory in container
-COPY app.py ./
+COPY ./app.py ./app.py
 
-#CMD instruction should be used to run the software
-#contained by your image, along with any arguments.
-
-CMD [ "python", "./app.py"]
+CMD ["python", "./app.py"]
